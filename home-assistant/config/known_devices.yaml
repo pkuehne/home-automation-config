@@ -1,0 +1,272 @@
+
+router:
+  hide_if_away: false
+  mac: 20:E5:2A:68:91:B5
+  name: Router
+  picture:
+  track: true
+  vendor: NETGEAR
+
+jarvis:
+  hide_if_away: false
+  mac: B8:AE:ED:71:25:B3
+  name: Jarvis
+  picture:
+  track: false
+  vendor: Elitegroup Computer Systems Co.,Ltd.
+
+scrooge:
+  hide_if_away: false
+  mac: 28:C6:8E:36:EE:42
+  name: Scrooge
+  picture:
+  track: true
+  vendor: NETGEAR
+
+sonoszp:
+  hide_if_away: false
+  mac: B8:E9:37:8D:EB:5C
+  name: SonosZP
+  picture:
+  track: false
+  vendor: Sonos, Inc.
+
+roku:
+  hide_if_away: false
+  mac: DC:3A:5E:31:F1:F1
+  name: Roku 3 - 298
+  picture:
+  track: true
+  vendor: Roku, Inc.
+
+sonoszp_2:
+  hide_if_away: false
+  mac: B8:E9:37:DB:91:92
+  name: SonosZP
+  picture:
+  track: false
+  vendor: Sonos, Inc.
+
+sonoszp_3:
+  hide_if_away: false
+  mac: B8:E9:37:DB:57:46
+  name: SonosZP
+  picture:
+  track: false
+  vendor: Sonos, Inc.
+
+sonoszp_4:
+  hide_if_away: false
+  mac: B8:E9:37:89:32:74
+  name: SonosZP
+  picture:
+  track: false
+  vendor: Sonos, Inc.
+
+peter_phone:
+  hide_if_away: false
+  mac: AC:37:43:A0:69:98
+  name: Peter
+  picture:
+  gravatar: peter.kuehne@gmail.com
+  track: true
+  vendor: HTC Corporation
+
+caesar:
+  hide_if_away: false
+  mac: D4:3D:7E:31:CC:0D
+  name: Caesar
+  picture:
+  track: true
+  vendor: Micro-Star Int'l Co, Ltd
+
+peter_tablet:
+  hide_if_away: false
+  mac: AC:22:0B:A2:14:38
+  name: Peter's Tablet
+  picture:
+  track: true
+  vendor: ASUSTek COMPUTER INC.
+
+hassbian:
+  hide_if_away: false
+  mac: B8:27:EB:C3:47:BD
+  name: hassbian
+  picture:
+  track: false
+  vendor: Raspberry Pi Foundation
+
+hue_hub:
+  hide_if_away: false
+  mac: 00:17:88:4E:3F:BE
+  name: Hue Bridge
+  picture:
+  track: false
+  vendor: Philips Lighting BV
+
+nintendo_switch:
+  hide_if_away: false
+  mac: 7C:BB:8A:AC:E6:43
+  name: Nintendo Switch
+  picture:
+  track: true
+  vendor: Nintendo Co., Ltd.
+
+ro_phone:
+  hide_if_away: false
+  mac: 5C:70:A3:7D:AB:A9
+  name: Ro
+  picture:
+  track: true
+  vendor: LG Electronics (Mobile Communications)
+
+lgwebostv:
+  hide_if_away: false
+  mac: 14:C9:13:23:7B:EC
+  name: LGwebOSTV
+  picture:
+  track: false
+  vendor: unknown
+
+bismarck:
+  hide_if_away: false
+  mac: E8:B1:FC:49:39:6E
+  name: Bismarck
+  picture:
+  track: true
+  vendor: Intel Corporate
+
+e8abfa6d5004:
+  hide_if_away: false
+  mac: E8:AB:FA:6D:50:04
+  name: Sophia's Camera
+  picture:
+  track: false
+  vendor: Shenzhen Reecam Tech.Ltd.
+
+704d7b08d479:
+  hide_if_away: false
+  mac: 70:4D:7B:08:D4:79
+  name: 704d7b08d479
+  picture:
+  track: false
+  vendor: ASUSTek COMPUTER INC.
+
+9068c3f54556:
+  hide_if_away: false
+  mac: 90:68:C3:F5:45:56
+  name: 9068c3f54556
+  picture:
+  track: false
+  vendor: Motorola Mobility LLC, a Lenovo Company
+
+080037ed7078:
+  hide_if_away: false
+  mac: 08:00:37:ED:70:78
+  name: 080037ed7078
+  picture:
+  track: false
+  vendor: FUJI-XEROX CO. LTD.
+
+e4f4c6182524:
+  hide_if_away: false
+  mac: E4:F4:C6:18:25:24
+  name: e4f4c6182524
+  picture:
+  track: false
+  vendor: NETGEAR
+
+58fb8466ebda:
+  hide_if_away: false
+  mac: 58:FB:84:66:EB:DA
+  name: 58fb8466ebda
+  picture:
+  track: false
+  vendor: Intel Corporate
+
+8c7c922983fc:
+  hide_if_away: false
+  mac: 8C:7C:92:29:83:FC
+  name: 8c7c922983fc
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+ac0d1bfa81b4:
+  hide_if_away: false
+  mac: AC:0D:1B:FA:81:B4
+  name: ac0d1bfa81b4
+  picture:
+  track: false
+  vendor: LG Electronics (Mobile Communications)
+
+9cf48ed1f43b:
+  hide_if_away: false
+  mac: 9C:F4:8E:D1:F4:3B
+  name: 9cf48ed1f43b
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+c80210cbd14e:
+  hide_if_away: false
+  icon:
+  mac: C8:02:10:CB:D1:4E
+  name: c80210cbd14e
+  picture:
+  track: false
+  vendor: LG Innotek
+
+b8e9378c9312:
+  hide_if_away: false
+  icon:
+  mac: B8:E9:37:8C:93:12
+  name: b8e9378c9312
+  picture:
+  track: true
+  vendor: Sonos, Inc.
+
+b8e9378c930a:
+  hide_if_away: false
+  icon:
+  mac: B8:E9:37:8C:93:0A
+  name: b8e9378c930a
+  picture:
+  track: true
+  vendor: Sonos, Inc.
+
+0018dd2317ce:
+  hide_if_away: false
+  icon:
+  mac: 00:18:DD:23:17:CE
+  name: 0018dd2317ce
+  picture:
+  track: true
+  vendor: Silicondust Engineering Ltd
+
+5caafd10726f:
+  hide_if_away: false
+  icon:
+  mac: 5C:AA:FD:10:72:6F
+  name: 5caafd10726f
+  picture:
+  track: true
+  vendor: Sonos, Inc.
+
+peter_phone_phone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: peter phone
+  picture:
+  track: true
+  vendor:
+
+5460097f6a18:
+  hide_if_away: false
+  icon:
+  mac: 54:60:09:7F:6A:18
+  name: 5460097f6a18
+  picture:
+  track: true
+  vendor: Google, Inc.

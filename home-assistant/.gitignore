@@ -1,0 +1,6 @@
+config/home-assistant.log
+config/home-assistant_v2.db
+config/tts
+config/deps
+config/.HA_VERSION
+config/.uuid

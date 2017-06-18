@@ -1,0 +1,8 @@
+config/crontabs
+config/donoteditthisfile.conf
+etc/
+fail2ban/
+log/
+keys/
+config/nginx/.htpasswd
+config/nginx/dhparams.pem

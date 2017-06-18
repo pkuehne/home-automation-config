@@ -1,0 +1,128 @@
+# Views
+overview:
+    view: yes
+    icon: mdi:home
+    entities:
+        - group.people
+        - group.weather
+        - group.forecast
+        - group.all_automations
+        - group.all_scripts
+
+living_room:
+    name: Living Room
+    view: yes
+    entities:
+        - group.living_room_lights
+        - media_player.living_room_tv
+        - media_player.living_room
+        - media_player.plex_on_tv
+        - device_tracker.nintendo_switch
+
+dining_room:
+    name: Dining Room
+    view: yes
+    entities:
+        - group.dining_room_lights
+
+kitchen:
+    name: Kitchen
+    view: yes
+    entities:
+        - media_player.kitchen
+
+sophia_room:
+    name: Sophia's Room
+    view: yes
+    entities:
+        - camera.sophias_room
+
+guest_room:
+    name: Guest Room
+    view: yes
+    entities:
+        - media_player.guest_room
+
+bedroom:
+    name: Master Bedroom
+    view: yes
+    entities:
+        - media_player.master_bedroom
+        - device_tracker.peter_tablet
+        - group.master_bedroom_lights
+
+den:
+    name: Den
+    view: yes
+    entities:
+        - device_tracker.scrooge
+        - device_tracker.caesar
+        - device_tracker.router
+        - media_player.den
+
+# Groups
+all_automations:
+    name: All Rules
+    view: no
+    icon: mdi:robot
+    entities:
+        - automation.announce_peter_home
+
+all_scripts:
+    name: All Scripts
+    view: no
+    icon: mdi:script
+    entities:
+        - script.turn_off_all_lights
+
+weather:
+    name: Weather
+    view: no
+    entities:
+        - sun.sun
+        - sensor.owm_condition
+        - sensor.owm_temperature
+        - sensor.owm_humidity
+        - sensor.owm_wind_speed
+        - sensor.owm_wind_bearing
+
+forecast:
+    name: Forecast
+    view: no
+    entities:
+        - weather.forecast
+
+people:
+    name: People
+    view: no
+    entities:
+        - device_tracker.peter_phone
+        - device_tracker.ro_phone
+
+living_room_lights:
+    name: Living Room Lights
+    view: no
+    entities:
+        - light.behind_couch
+
+dining_room_lights:
+    name: Dining Room Lights
+    view: no
+    entities:
+        - light.bar
+        - light.dining_table
+
+master_bedroom_lights:
+    name: Master Bedroom Lights
+    view: no
+    entities:
+        - light.master_bedroom
+        - light.dressing_room
+
+all_lights:
+    name: All Lights
+    view: no
+    entities:
+        - group.living_room_lights
+        - group.dining_room_lights
+        - group.master_bedroom_lights

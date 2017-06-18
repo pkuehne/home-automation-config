@@ -1,0 +1,5 @@
+#      data:
+#          sonos_entity: media_player.den
+#          volume: 0.1
+#          message: 'Peter is home!'
+#          delay: '00:00:02'

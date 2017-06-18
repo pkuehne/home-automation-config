@@ -1,0 +1,63 @@
+version: '3'
+services:
+    letsencrypt:
+        image: "linuxserver/letsencrypt"
+        container_name: "letsencrypt"
+        restart: "always"
+        volumes:
+            - "./letsencrypt/config:/config"
+        ports:
+            - "443:443" #Exposed through router
+        environment:
+            EMAIL: "peter.kuehne@gmail.com"
+            URL: "quantumpete.duckdns.org"
+            SUBDOMAINS: "www,assistant,plex,zoneminder,find"
+            TZ: "Europe/London"
+        privileged: true
+    mosquitto:
+        image: "eclipse-mosquitto"
+        container_name: "mosquitto"
+        restart: "always"
+        volumes:
+            - "./mosquitto/config:/mqtt/config"
+            - "./mosquitto/data:/mqtt/data"
+            - "./mosquitto/log:/mqtt/log"
+        ports:
+            - "1883:1883"
+            - "9001:9001"
+    zoneminder:
+        image: "quantumobject/docker-zoneminder:latest"
+        container_name: "zoneminder"
+        restart: "always"
+        volumes:
+            - "./zoneminder/mysql:/var/lib/mysql"
+            - "./zoneminder/cache:/var/cache/zoneminder"
+            - "./zoneminder/backups:/var/backups"
+        ports:
+            - "9123:80"
+    home-assistant:
+        depends_on:
+            - "mosquitto"
+            - "zoneminder"
+            - "letsencrypt"
+        image: "homeassistant/home-assistant"
+        container_name: "home-assistant"
+        restart: "always"
+        network_mode: "host"
+        volumes:
+            - "./home-assistant/config:/config"
+            - "/etc/localtime:/etc/localtime:ro"
+        ports:
+            - "8123:8123"   # Todo: Set this back to 8123
+    appdaemon:
+        depends_on:
+            - "home-assistant"
+        image: "appdaemon:latest"
+        container_name: "appdaemon"
+        restart: "always"
+        volumes:
+            - "./appdaemon/:/conf"
+    duckdns:
+        build: "./duckdns"
+        container_name: "duckdns"
+        restart: "always"

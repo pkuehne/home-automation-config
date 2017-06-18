@@ -1,0 +1,1 @@
+8 1 * * * /etc/duckdns.sh >> /var/log/duckdns.log 2>&1

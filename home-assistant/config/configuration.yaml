@@ -1,0 +1,157 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret latitude
+  longitude: !secret longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 100
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/London
+  customize:
+    media_player.plex_plex_for_lg_webos_043065:
+      friendly_name: Plex On TV
+      icon: mdi:plex
+    media_player.living_room:
+      friendly_name: Sonos Living Room
+      icon: mdi:speaker
+    media_player.kitchen:
+      friendly_name: Sonos Kitchen
+      icon: mdi:speaker
+    media_player.den:
+      friendly_name: Sonos Den
+      icon: mdi:speaker
+    media_player.guest_room:
+      friendly_name: Sonos Guest Room
+      icon: mdi:speaker
+    media_player.master_bedroom:
+      friendly_name: Sonos Master Bedroom
+      icon: mdi:speaker
+    sensor.owm_condition:
+      friendly_name: Condition
+      icon: mdi:weather-partlycloudy
+    sensor.owm_temperature:
+      friendly_name: Temperature
+    sensor.owm_humidity:
+      friendly_name: Humidity
+      icon: mdi:water-percent
+    sensor.owm_wind_speed:
+      friendly_name: Wind Speed
+      icon: mdi:weather-windy
+    sensor.owm_wind_bearing:
+      friendly_name: Wind Direction
+      icon: mdi:arrow-expand-all
+
+
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  # api_password: PASSWORD
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+# Text to speech
+tts:
+  platform: google
+
+logger:
+
+group: !include groups.yaml
+
+automation: !include automations.yaml
+
+script: !include scripts.yaml
+
+python_script:
+
+device_tracker:
+  - platform: nmap_tracker
+    hosts: 192.168.1.1/24
+    exclude: 192.168.1.91
+    consider_home: 300
+  - platform: owntracks
+
+weather:
+  - platform: openweathermap
+    api_key: !secret owm_key
+    name: forecast
+
+sensor:
+  - platform: openweathermap
+    api_key: !secret owm_key
+    monitored_conditions:
+        - weather
+        - temperature
+        - wind_speed
+        - wind_bearing
+        - humidity
+        - pressure
+        - clouds
+        - rain
+        - snow
+
+media_player:
+  - platform: webostv
+    name: Living Room TV
+    host: 192.168.1.120
+    mac: 14:C9:13:23:7B:EC
+    sources:
+      - livetv
+      - plex
+      - youtube
+      - netflix
+      - 'Xbox One'
+  - platform: plex
+    entity_namespace: 'plex'
+  - platform: sonos
+
+notify:
+  - name: notify
+    platform: pushbullet
+    api_key: !secret pb_key
+
+camera:
+  - platform: foscam
+    ip: 192.168.1.30
+    username: !secret fc_user
+    password: !secret fc_password
+    name: Sophias Room
+
+mqtt:
+    broker: 192.168.1.91
+    port: 1883
+    client_id: home_assistant
+    keepalive: 60
+    protocol: 3.1
+
+light:
+  - platform: hue
+    host: 192.168.1.31
