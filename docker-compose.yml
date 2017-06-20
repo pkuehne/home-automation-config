@@ -33,12 +33,12 @@ services:
             - "./zoneminder/mysql:/var/lib/mysql"
             - "./zoneminder/cache:/var/cache/zoneminder"
             - "./zoneminder/backups:/var/backups"
+            - "./zoneminder/config:/config"
         ports:
             - "9123:80"
     home-assistant:
         depends_on:
             - "mosquitto"
-            - "zoneminder"
             - "letsencrypt"
         image: "homeassistant/home-assistant"
         container_name: "home-assistant"
@@ -49,6 +49,8 @@ services:
             - "/etc/localtime:/etc/localtime:ro"
         ports:
             - "8123:8123"   # Todo: Set this back to 8123
+        devices:
+            - "/dev/zwave:/dev/zwave"
     appdaemon:
         depends_on:
             - "home-assistant"

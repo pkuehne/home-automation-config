@@ -16,7 +16,7 @@ living_room:
         - group.living_room_lights
         - media_player.living_room_tv
         - media_player.living_room
-        - media_player.plex_on_tv
+        - media_player.plex_plex_for_lg_webos_043065
         - device_tracker.nintendo_switch
 
 dining_room:
@@ -36,6 +36,10 @@ sophia_room:
     view: yes
     entities:
         - camera.sophias_room
+        - sensor.sophias_room_relative_humidity
+        - sensor.sophias_room_luminance
+        - sensor.sophias_room_temperature
+        - sensor.sophias_room_ultraviolet
 
 guest_room:
     name: Guest Room

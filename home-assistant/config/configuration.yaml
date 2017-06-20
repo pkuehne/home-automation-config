@@ -90,7 +90,7 @@ automation: !include automations.yaml
 
 script: !include scripts.yaml
 
-python_script:
+#python_script:
 
 device_tracker:
   - platform: nmap_tracker
@@ -155,3 +155,9 @@ mqtt:
 light:
   - platform: hue
     host: 192.168.1.31
+
+zwave:
+    usb_path: /dev/zwave
+    network_key: !secret zwave_key
+    new_entity_ids: true
+
