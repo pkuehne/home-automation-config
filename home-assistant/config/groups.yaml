@@ -6,8 +6,7 @@ overview:
         - group.people
         - group.weather
         - group.forecast
-        - group.all_automations
-        - group.all_scripts
+        - group.indoor_lights
 
 living_room:
     name: Living Room
@@ -16,7 +15,7 @@ living_room:
         - group.living_room_lights
         - media_player.living_room_tv
         - media_player.living_room
-        - media_player.plex_plex_for_lg_webos_043065
+        - media_player.plex_for_lg_webos_043065
         - device_tracker.nintendo_switch
 
 dining_room:
@@ -40,6 +39,7 @@ sophia_room:
         - sensor.sophias_room_luminance
         - sensor.sophias_room_temperature
         - sensor.sophias_room_ultraviolet
+        - binary_sensor.sophias_room_sensor
 
 guest_room:
     name: Guest Room
@@ -65,20 +65,6 @@ den:
         - media_player.den
 
 # Groups
-all_automations:
-    name: All Rules
-    view: no
-    icon: mdi:robot
-    entities:
-        - automation.announce_peter_home
-
-all_scripts:
-    name: All Scripts
-    view: no
-    icon: mdi:script
-    entities:
-        - script.turn_off_all_lights
-
 weather:
     name: Weather
     view: no
@@ -109,6 +95,12 @@ living_room_lights:
     entities:
         - light.behind_couch
 
+garden_lights:
+    name: Garden Lights
+    view: no
+    entities:
+        - light.patio_light
+
 dining_room_lights:
     name: Dining Room Lights
     view: no
@@ -120,11 +112,11 @@ master_bedroom_lights:
     name: Master Bedroom Lights
     view: no
     entities:
-        - light.master_bedroom
+        - light.master_bedroom_ceiling
         - light.dressing_room
 
-all_lights:
-    name: All Lights
+indoor_lights:
+    name: Indoor Lights
     view: no
     entities:
         - group.living_room_lights

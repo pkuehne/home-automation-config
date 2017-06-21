@@ -17,7 +17,6 @@ class NotifyOnNewDevice(api.AppDaemon):
 
     def new_device_callback(self, event_name, data, kwargs):
         self.log("New device detected")
-        self.log(data)
         self.notify("New device '{}' detected on network".format(
             data["host_name"]),
             title="Home Assistant")

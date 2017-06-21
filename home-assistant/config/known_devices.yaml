@@ -112,14 +112,6 @@ nintendo_switch:
   track: true
   vendor: Nintendo Co., Ltd.
 
-ro_phone:
-  hide_if_away: false
-  mac: 5C:70:A3:7D:AB:A9
-  name: Ro
-  picture:
-  track: true
-  vendor: LG Electronics (Mobile Communications)
-
 lgwebostv:
   hide_if_away: false
   mac: 14:C9:13:23:7B:EC
@@ -136,7 +128,7 @@ bismarck:
   track: true
   vendor: Intel Corporate
 
-e8abfa6d5004:
+sophia_camera:
   hide_if_away: false
   mac: E8:AB:FA:6D:50:04
   name: Sophia's Camera
@@ -176,22 +168,6 @@ e4f4c6182524:
   track: false
   vendor: NETGEAR
 
-58fb8466ebda:
-  hide_if_away: false
-  mac: 58:FB:84:66:EB:DA
-  name: 58fb8466ebda
-  picture:
-  track: false
-  vendor: Intel Corporate
-
-8c7c922983fc:
-  hide_if_away: false
-  mac: 8C:7C:92:29:83:FC
-  name: 8c7c922983fc
-  picture:
-  track: false
-  vendor: Apple, Inc.
-
 ac0d1bfa81b4:
   hide_if_away: false
   mac: AC:0D:1B:FA:81:B4
@@ -200,30 +176,13 @@ ac0d1bfa81b4:
   track: false
   vendor: LG Electronics (Mobile Communications)
 
-9cf48ed1f43b:
-  hide_if_away: false
-  mac: 9C:F4:8E:D1:F4:3B
-  name: 9cf48ed1f43b
-  picture:
-  track: false
-  vendor: Apple, Inc.
-
-c80210cbd14e:
-  hide_if_away: false
-  icon:
-  mac: C8:02:10:CB:D1:4E
-  name: c80210cbd14e
-  picture:
-  track: false
-  vendor: LG Innotek
-
 b8e9378c9312:
   hide_if_away: false
   icon:
   mac: B8:E9:37:8C:93:12
   name: b8e9378c9312
   picture:
-  track: true
+  track: false
   vendor: Sonos, Inc.
 
 b8e9378c930a:
@@ -232,17 +191,8 @@ b8e9378c930a:
   mac: B8:E9:37:8C:93:0A
   name: b8e9378c930a
   picture:
-  track: true
+  track: false
   vendor: Sonos, Inc.
-
-0018dd2317ce:
-  hide_if_away: false
-  icon:
-  mac: 00:18:DD:23:17:CE
-  name: 0018dd2317ce
-  picture:
-  track: true
-  vendor: Silicondust Engineering Ltd
 
 5caafd10726f:
   hide_if_away: false
@@ -250,7 +200,7 @@ b8e9378c930a:
   mac: 5C:AA:FD:10:72:6F
   name: 5caafd10726f
   picture:
-  track: true
+  track: false
   vendor: Sonos, Inc.
 
 peter_phone_phone:
@@ -262,11 +212,12 @@ peter_phone_phone:
   track: true
   vendor:
 
-5460097f6a18:
-  hide_if_away: false
-  icon:
-  mac: 54:60:09:7F:6A:18
-  name: 5460097f6a18
-  picture:
-  track: true
-  vendor: Google, Inc.
+      #ro_phone:
+      #hide_if_away: false
+      #icon:
+      #mac: 70:28:8B:D7:79:4D
+      #name: Ro
+      #picture:
+      #track: true
+      #vendor: Samsung Electronics Co.,Ltd
+      
