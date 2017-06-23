@@ -1,6 +1,7 @@
 
 router:
   hide_if_away: false
+  icon: mdi:router-wireless
   mac: 20:E5:2A:68:91:B5
   name: Router
   picture:
@@ -9,6 +10,7 @@ router:
 
 jarvis:
   hide_if_away: false
+  icon: mdi:server
   mac: B8:AE:ED:71:25:B3
   name: Jarvis
   picture:
@@ -17,6 +19,7 @@ jarvis:
 
 scrooge:
   hide_if_away: false
+  icon: mdi:archive
   mac: 28:C6:8E:36:EE:42
   name: Scrooge
   picture:
@@ -33,8 +36,9 @@ sonoszp:
 
 roku:
   hide_if_away: false
+  icon: mdi:filmstrip
   mac: DC:3A:5E:31:F1:F1
-  name: Roku 3 - 298
+  name: Roku 3
   picture:
   track: true
   vendor: Roku, Inc.
@@ -74,6 +78,7 @@ peter_phone:
 
 caesar:
   hide_if_away: false
+  icon: mdi:desktop-tower
   mac: D4:3D:7E:31:CC:0D
   name: Caesar
   picture:
@@ -82,6 +87,7 @@ caesar:
 
 peter_tablet:
   hide_if_away: false
+  icon: mdi:tablet
   mac: AC:22:0B:A2:14:38
   name: Peter's Tablet
   picture:
@@ -106,6 +112,7 @@ hue_hub:
 
 nintendo_switch:
   hide_if_away: false
+  icon: mdi:nintendo-switch
   mac: 7C:BB:8A:AC:E6:43
   name: Nintendo Switch
   picture:
@@ -114,14 +121,16 @@ nintendo_switch:
 
 lgwebostv:
   hide_if_away: false
+  icon: mdi:television-classic
   mac: 14:C9:13:23:7B:EC
-  name: LGwebOSTV
+  name: Living Room TV
   picture:
   track: false
   vendor: unknown
 
 bismarck:
   hide_if_away: false
+  icon: mdi:laptop
   mac: E8:B1:FC:49:39:6E
   name: Bismarck
   picture:
@@ -131,6 +140,7 @@ bismarck:
 sophia_camera:
   hide_if_away: false
   mac: E8:AB:FA:6D:50:04
+  icon: mdi:camera
   name: Sophia's Camera
   picture:
   track: false
@@ -152,18 +162,20 @@ sophia_camera:
   track: false
   vendor: Motorola Mobility LLC, a Lenovo Company
 
-080037ed7078:
+printer:
   hide_if_away: false
+  icon: mdi:printer
   mac: 08:00:37:ED:70:78
-  name: 080037ed7078
+  name: Printer
   picture:
   track: false
   vendor: FUJI-XEROX CO. LTD.
 
-e4f4c6182524:
+living_room_repeater:
   hide_if_away: false
+  icon: mdi:router-wireless
   mac: E4:F4:C6:18:25:24
-  name: e4f4c6182524
+  name: Living Room Repeater
   picture:
   track: false
   vendor: NETGEAR
@@ -203,21 +215,47 @@ b8e9378c930a:
   track: false
   vendor: Sonos, Inc.
 
-peter_phone_phone:
+google_home:
   hide_if_away: false
-  icon:
-  mac:
-  name: peter phone
+  icon: mdi:google
+  mac: 54:60:09:7F:6A:18
+  name: Google Home
   picture:
   track: true
-  vendor:
+  vendor: Google, Inc.
 
-      #ro_phone:
-      #hide_if_away: false
-      #icon:
-      #mac: 70:28:8B:D7:79:4D
-      #name: Ro
-      #picture:
-      #track: true
-      #vendor: Samsung Electronics Co.,Ltd
-      
+tv_tuner:
+  hide_if_away: false
+  icon: mdi:waves
+  mac: 00:18:DD:23:17:CE
+  name: TV Tuner
+  picture:
+  track: true
+  vendor: unknown
+
+xbox_one:
+  hide_if_away: false
+  icon: mdi:xbox
+  mac: C0:33:5E:A3:7C:0D
+  name: Xbox One
+  picture:
+  track: true
+  vendor: Microsoft
+
+ro_phone:
+  hide_if_away: false
+  icon: mdi:account
+  mac: 48:27:EA:6A:A2:DE
+  name: Ro
+  picture:
+  track: true
+  vendor: Samsung Electronics Co.,Ltd
+
+70288bd7794d:
+  hide_if_away: false
+  icon:
+  mac: 70:28:8B:D7:79:4D
+  name: 70288bd7794d
+  picture:
+  track: false
+  vendor: Samsung Electronics Co.,Ltd

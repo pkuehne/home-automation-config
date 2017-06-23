@@ -8,6 +8,12 @@ import datetime as dt
 #   - sensor
 #   - light
 #
+# Use with:
+# sensor: sensor.something
+# light: light.something
+# constrain_start_time = sunset + 00:30:00
+# constrain_end_time = sunrise
+#
 
 class MotionLight(api.AppDaemon):
     """ Turns on couch light when it gets dark """

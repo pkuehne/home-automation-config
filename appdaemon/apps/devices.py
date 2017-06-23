@@ -8,7 +8,7 @@ import datetime as dt
 #
 
 class NotifyOnNewDevice(api.AppDaemon):
-    """ Turns on couch light when it gets dark """
+    """ Notifies when a new device joins the network """
 
     def initialize(self):
         """ Sets up callbacks and state """
@@ -17,6 +17,7 @@ class NotifyOnNewDevice(api.AppDaemon):
 
     def new_device_callback(self, event_name, data, kwargs):
         self.log("New device detected")
+        self.log(str(data))
         self.notify("New device '{}' detected on network".format(
             data["host_name"]),
             title="Home Assistant")

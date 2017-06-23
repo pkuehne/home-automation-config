@@ -5,8 +5,10 @@ overview:
     entities:
         - group.people
         - group.weather
+        - group.temperature
         - group.forecast
         - group.indoor_lights
+        - group.alarm_panel
 
 living_room:
     name: Living Room
@@ -14,8 +16,8 @@ living_room:
     entities:
         - group.living_room_lights
         - media_player.living_room_tv
-        - media_player.living_room
         - media_player.plex_for_lg_webos_043065
+        - media_player.living_room
         - device_tracker.nintendo_switch
 
 dining_room:
@@ -82,6 +84,13 @@ forecast:
     entities:
         - weather.forecast
 
+temperature:
+    name: Temperature
+    view: no
+    entities:
+      - sensor.average_temperature
+      - sensor.sophias_room_temperature
+
 people:
     name: People
     view: no
@@ -89,6 +98,26 @@ people:
         - device_tracker.peter_phone
         - device_tracker.ro_phone
 
+batteries:
+    name: Battery Status
+    view: no
+    entities:
+        - sensor.peters_phone_battery
+        - sensor.peters_tablet_battery
+alarm_panel:
+    name: Alarm Panel
+    view: no
+    entities:
+        - alarm_control_panel.ha_alarm
+
+date:
+    name: Date/Time
+    view: no
+    entities:
+        - sensor.date
+        - sensor.time
+        - sensor.time_in_hamburg
+        - sensor.time_in_pilar
 living_room_lights:
     name: Living Room Lights
     view: no

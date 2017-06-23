@@ -43,7 +43,12 @@ homeassistant:
     sensor.owm_wind_bearing:
       friendly_name: Wind Direction
       icon: mdi:arrow-expand-all
-
+    sensor.peters_phone_battery:
+      friendly_name: Peter's phone battery
+      icon: mdi:battery
+    sensor.peters_tablet_battery:
+      friendly_name: Peter's tablet battery
+      icon: mdi:battery
 
 # Show links to resources in log and frontend
 #introduction:
@@ -117,11 +122,39 @@ sensor:
         - clouds
         - rain
         - snow
+  - platform: mqtt
+    state_topic: "owntracks/peter/phone"
+    name: "Peter's phone battery"
+    unit_of_measurement: "%"
+    value_template: '{{ value_json.batt }}'
+  - platform: mqtt
+    state_topic: "owntracks/peter/tablet"
+    name: "Peter's tablet battery"
+    unit_of_measurement: "%"
+    value_template: '{{ value_json.batt }}'
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+  - platform: worldclock
+    time_zone: Europe/Berlin
+    name: "Time in Hamburg"
+  - platform: worldclock
+    time_zone: America/Argentina/Buenos_Aires
+    name: "Time in Pilar"
+  - platform: min_max
+    type: mean
+    name: "Average Temperature"
+    entity_ids:
+      - sensor.sophias_room_temperature
+
+alarm_control_panel:
+  - platform: manual
 
 media_player:
   - platform: webostv
     name: Living Room TV
-    host: 192.168.1.120
+    host: 192.168.1.32
     mac: 14:C9:13:23:7B:EC
     sources:
       - livetv
@@ -151,6 +184,8 @@ mqtt:
     client_id: home_assistant
     keepalive: 60
     protocol: 3.1
+    username: !secret mqtt_user
+    password: !secret mqtt_password
 
 light:
   - platform: hue
