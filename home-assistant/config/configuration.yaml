@@ -52,7 +52,7 @@ homeassistant:
     sensor.time:
       friendly_name: "Time in Redhill"
     sensor.upstairs_landing_battery:
-    icon: mdi:battery
+      icon: mdi:battery
 
 # Show links to resources in log and frontend
 #introduction:
@@ -208,3 +208,12 @@ zwave:
     network_key: !secret zwave_key
     new_entity_ids: true
 
+switch:
+  platform: mqtt
+  name: "Fan 1"
+  command_topic: "cmnd/fan1/POWER"
+  state_topic: "stat/fan1/POWER"
+  qos: 1
+  payload_on: "on"
+  payload_off: "off"
+  retain: true

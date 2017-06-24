@@ -259,3 +259,12 @@ ro_phone:
   picture:
   track: false
   vendor: Samsung Electronics Co.,Ltd
+
+5ccf7faf0a3c:
+  hide_if_away: false
+  icon:
+  mac: 5C:CF:7F:AF:0A:3C
+  name: 5ccf7faf0a3c
+  picture:
+  track: true
+  vendor: Espressif Inc.
