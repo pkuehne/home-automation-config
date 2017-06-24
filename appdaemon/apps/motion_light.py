@@ -22,16 +22,16 @@ class MotionLight(api.AppDaemon):
         """ Sets up callbacks and state """
         self.handle = None
         self.log("Motion Lights initalised...")
-        self.listen_state(self.motion_callback, args["sensor"], new = "on")
-        self.listen_state(self.still_callback, args["sensor"], new = "off")
+        self.listen_state(self.motion_callback, self.args["sensor"], new = "on")
+        self.listen_state(self.still_callback, self.args["sensor"], new = "off")
 
-    def motion_callback(self, kwargs):
+    def motion_callback(self, entity, attribute, old, new, kwargs):
         """ Motion detected """
         self.log("Motion detected")
-        self.turn_on(args["light"], brightness_pct=args["brightness"])
+        self.turn_on(self.args["light"], brightness_pct=self.args["brightness"])
 
-    def still_callback(self, kwargs):
+    def still_callback(self, entity, attribute, old, new, kwargs):
         """ Motion has gone away """
         self.log("Motion has gone")
-        self.turn_off(args["light"], transition=60)
+        self.turn_off(self.args["light"], transition=30)
 

@@ -90,6 +90,7 @@ temperature:
     entities:
       - sensor.average_temperature
       - sensor.sophias_room_temperature
+      - sensor.upstairs_landing_temperature
 
 people:
     name: People
@@ -104,6 +105,15 @@ batteries:
     entities:
         - sensor.peters_phone_battery
         - sensor.peters_tablet_battery
+        - sensor.upstairs_landing_battery
+
+motion_detectors:
+    name: Motion Detectors
+    view: no
+    entities:
+      - binary_sensor.sophias_room_sensor
+      - binary_sensor.upstairs_landing_sensor
+
 alarm_panel:
     name: Alarm Panel
     view: no
@@ -144,10 +154,19 @@ master_bedroom_lights:
         - light.master_bedroom_ceiling
         - light.dressing_room
 
+hallway_lights:
+  name: Hallway Lights
+  view: no
+  entities:
+    - light.hallway_ceiling
+    - light.first_floor_landing_ceiling
+    - light.upstairs_landing_ceiling
+
 indoor_lights:
-    name: Indoor Lights
-    view: no
-    entities:
-        - group.living_room_lights
-        - group.dining_room_lights
-        - group.master_bedroom_lights
+  name: Indoor Lights
+  view: no
+  entities:
+    - group.hallway_lights
+    - group.living_room_lights
+    - group.dining_room_lights
+    - group.master_bedroom_lights
