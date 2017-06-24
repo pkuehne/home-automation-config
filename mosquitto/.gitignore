@@ -1,0 +1,3 @@
+config/users.txt
+data/mosquitto.db
+log/mosquitto.log
