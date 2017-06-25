@@ -159,7 +159,6 @@ sensor:
         friendly_name: "Upstairs Landing Sensor Battery"
         unit_of_measurement: "%"
 
-
 alarm_control_panel:
   - platform: manual
 
@@ -217,3 +216,24 @@ switch:
   payload_on: "on"
   payload_off: "off"
   retain: true
+
+input_slider:
+  wakeup_hour:
+    name: Wake Up Hour
+    initial: 6
+    min: 0
+    max: 23
+    step: 1
+    icon: mdi:clock
+  wakeup_minute:
+    name: Wake Up Minute
+    initial: 0
+    min: 0
+    max: 60
+    step: 5
+    icon: mdi:clock
+input_boolean:
+  wakeup_enabled:
+    name: Enable Wakeup Routine
+    initial: off
+    icon: mdi:alarm

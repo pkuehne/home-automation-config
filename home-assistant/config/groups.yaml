@@ -170,3 +170,11 @@ indoor_lights:
     - group.living_room_lights
     - group.dining_room_lights
     - group.master_bedroom_lights
+
+wakeup:
+  name: Wakeup Routine
+  view: no
+  entities:
+    - input_boolean.wakeup_enabled
+    - input_slider.wakeup_hour
+    - input_slider.wakeup_minute
