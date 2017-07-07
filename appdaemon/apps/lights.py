@@ -47,7 +47,7 @@ class NightOff(api.AppDaemon):
         if self.get_state("media_player.living_room_tv") == "off":
             self.log("No activity. Turning off light...")
             self.turn_off("light.behind_couch", transition=900)
-            self.turn_on("light.light.master_bedroom_ceiling", brightness_pct=60)
+            self.turn_on("light.master_bedroom_ceiling", brightness_pct=60)
         else:
             if self.now_is_between("22:00:00", "03:00:00"):
                 # Run check only until 3am

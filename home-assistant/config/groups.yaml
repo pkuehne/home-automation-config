@@ -96,7 +96,7 @@ people:
     name: People
     view: no
     entities:
-        - device_tracker.peter_phone
+        - device_tracker.peter_phone_phone
         - device_tracker.ro_phone
 
 batteries:
@@ -178,3 +178,11 @@ wakeup:
     - input_boolean.wakeup_enabled
     - input_slider.wakeup_hour
     - input_slider.wakeup_minute
+
+fan_control:
+  name: Fan Control
+  view: no
+  entities:
+    - input_boolean.fan_automation
+    - switch.fan_1
+

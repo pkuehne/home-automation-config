@@ -17,7 +17,7 @@ class AlarmController(api.AppDaemon):
         #self.listen_state(self.alarm_trigger, "group.door_sensors", new = "on")
 
     def alarm_trigger(self, trigger_group, attribute, old, new, kwargs):
-        self.log("A change was detected")
+        """ Called when there is a change """
         triggered_sensor = None
         for sensor in self.get_state(trigger_group, "all")["attributes"]["entity_id"]:
             if self.get_state(sensor) == "on":

@@ -67,7 +67,7 @@ sonoszp_4:
   track: false
   vendor: Sonos, Inc.
 
-peter_phone:
+peter_phone_phone:
   hide_if_away: false
   mac: AC:37:43:A0:69:98
   name: Peter
@@ -268,3 +268,30 @@ ro_phone:
   picture:
   track: true
   vendor: Espressif Inc.
+
+peter_kindle:
+  hide_if_away: false
+  icon: mdi:book-open
+  mac: F0:4F:7C:FE:03:21
+  name: Peter's Kindle
+  picture:
+  track: true
+  vendor: Private
+
+peter_phone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: peter
+  picture:
+  track: true
+  vendor:
+
+ro_tablet:
+  hide_if_away: false
+  icon: mdi:tablet
+  mac: A0:02:DC:30:C7:46
+  name: Ro's tablet
+  picture:
+  track: true
+  vendor: Amazon Technologies Inc.

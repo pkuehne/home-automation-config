@@ -92,6 +92,9 @@ tts:
   platform: google
 
 logger:
+  default: critical
+  logs:
+    homeassistant.components.python_script: debug
 
 group: !include groups.yaml
 
@@ -99,7 +102,7 @@ automation: !include automations.yaml
 
 script: !include scripts.yaml
 
-#python_script:
+python_script:
 
 device_tracker:
   - platform: nmap_tracker
@@ -127,15 +130,15 @@ sensor:
         - rain
         - snow
   - platform: mqtt
-    state_topic: "owntracks/peter/phone"
+    state_topic: "zanzito/peter_phone/battery_level"
     name: "Peter's phone battery"
     unit_of_measurement: "%"
-    value_template: '{{ value_json.batt }}'
+    value_template: '{{ value }}'
   - platform: mqtt
-    state_topic: "owntracks/peter/tablet"
+    state_topic: "zanzito/peter_tablet/battery_level"
     name: "Peter's tablet battery"
     unit_of_measurement: "%"
-    value_template: '{{ value_json.batt }}'
+    value_template: '{{ value }}'
   - platform: time_date
     display_options:
       - 'time'
@@ -237,3 +240,7 @@ input_boolean:
     name: Enable Wakeup Routine
     initial: off
     icon: mdi:alarm
+  fan_automation:
+    name: Fan Automation
+    initial: on
+    icon: mdi:fan
