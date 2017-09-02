@@ -47,7 +47,6 @@ class NightOff(api.AppDaemon):
         if self.get_state("media_player.living_room_tv") == "off":
             self.log("No activity. Turning off light...")
             self.turn_off("light.behind_couch", transition=900)
-            self.turn_on("light.master_bedroom_ceiling", brightness_pct=60)
         else:
             if self.now_is_between("22:00:00", "03:00:00"):
                 # Run check only until 3am
@@ -71,7 +70,6 @@ class PatioLight(api.AppDaemon):
     def sunset_callback(self, kwargs):
         """ Turn the light on """
         self.turn_on("light.patio_light", brightness=254)
-        self.log("Patio light turned on...")
 
     def sunrise_callback(self, kwargs):
         """ Turn the light off """
@@ -86,5 +84,3 @@ class PatioLight(api.AppDaemon):
             self.log("Patio light wasn't off yet, trying again...")
             self.turn_off("light.patio_light")
             self.run_in(self.verification_callback, 30)
-        else:
-            self.notify("Turned off patio light!", title="Home Assistant")

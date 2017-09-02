@@ -21,7 +21,8 @@ class MotionLight(api.AppDaemon):
     def initialize(self):
         """ Sets up callbacks and state """
         self.handle = None
-        self.log("Motion Lights initalised...")
+        self.log("Motion Lights initalised for '{}'".format(
+            self.args["light"]))
         self.listen_state(self.motion_callback, self.args["sensor"], new = "on")
         self.listen_state(self.still_callback, self.args["sensor"], new = "off")
 

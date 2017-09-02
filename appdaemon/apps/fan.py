@@ -28,12 +28,17 @@ class FanController(api.AppDaemon):
 
     def temperature_change_callback(self, entity, attributes, old, new, kwargs):
         """ Temperature changed """
-        if new is not None and new > self.args["upper_bound"]:
+        fan_state = self.get_state(self.args["fan"])
+        if new is not None and \
+                float(new) > self.args["upper_bound"] and \
+                fan_state == "off":
             self.log("It's too hot @ {}C, turning on {}".format(
                 new, self.args["fan"]))
             self.turn_on(self.args["fan"])
 
-        if new is not None and new < self.args["lower_bound"]:
+        if new is not None and \
+                float(new) < self.args["lower_bound"] and \
+                fan_state == "on":
             self.log("It's cold enough again @ {}C, turning off {}".format(
                 new, self.args["fan"]))
             self.turn_off(self.args["fan"])

@@ -1,0 +1,74 @@
+AppDaemon:
+  logfile: STDOUT
+  errorfile: STDERR
+  threads: 10
+HASS:
+  ha_url: http://192.168.1.91:8123
+  ha_key:
+HADashboard:
+  dash_url: http://192.168.1.91:5050
+
+# Apps
+hello_world:
+  module: hello
+  class: HelloWorld
+
+behind_couch_evening_on:
+  module: lights
+  class: EveningOn
+
+behind_couch_evening_off:
+  module: lights
+  class: NightOff
+
+patio_light_control:
+  module: lights
+  class: PatioLight
+
+Network Surveillance:
+  module: devices
+  class : NotifyOnNewDevice
+
+Morning Status:
+  module: status
+  class: Summary
+
+Upstairs Landing Night Light:
+  module: motion_light
+  class: MotionLight
+  sensor: binary_sensor.upstairs_landing_sensor
+  light: light.upstairs_landing_ceiling
+  brightness: 5
+  constrain_start_time: sunset + 00:30:00
+  constrain_end_time: sunrise
+
+Hallway Night Light:
+  module: motion_light
+  class: MotionLight
+  sensor: binary_sensor.hallway_sensor
+  light: light.hallway_ceiling
+  brightness: 60
+  constrain_start_time: sunset + 00:30:00
+  constrain_end_time: sunrise
+
+Fan 1 Temperature Control:
+  module: fan
+  class: FanController
+  sensor: sensor.average_temperature
+  fan: switch.fan_1
+  upper_bound: 26
+  lower_bound: 24
+  constrain_input_boolean: input_boolean.fan_automation
+
+Home Alarm:
+  module: alarm
+  class: AlarmController
+
+Morning Wakeup:
+  module: wakeup
+  class: AlarmClock
+
+Sonos Notifier:
+  module: sonos_say
+  class: SonosSay
+

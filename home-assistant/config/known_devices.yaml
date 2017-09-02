@@ -67,7 +67,7 @@ sonoszp_4:
   track: false
   vendor: Sonos, Inc.
 
-peter_phone_phone:
+peter_phone:
   hide_if_away: false
   mac: AC:37:43:A0:69:98
   name: Peter
@@ -146,22 +146,6 @@ sophia_camera:
   track: false
   vendor: Shenzhen Reecam Tech.Ltd.
 
-704d7b08d479:
-  hide_if_away: false
-  mac: 70:4D:7B:08:D4:79
-  name: 704d7b08d479
-  picture:
-  track: false
-  vendor: ASUSTek COMPUTER INC.
-
-9068c3f54556:
-  hide_if_away: false
-  mac: 90:68:C3:F5:45:56
-  name: 9068c3f54556
-  picture:
-  track: false
-  vendor: Motorola Mobility LLC, a Lenovo Company
-
 printer:
   hide_if_away: false
   icon: mdi:printer
@@ -180,35 +164,27 @@ living_room_repeater:
   track: false
   vendor: NETGEAR
 
-ac0d1bfa81b4:
+sonos_one:
   hide_if_away: false
-  mac: AC:0D:1B:FA:81:B4
-  name: ac0d1bfa81b4
-  picture:
-  track: false
-  vendor: LG Electronics (Mobile Communications)
-
-b8e9378c9312:
-  hide_if_away: false
-  icon:
+  icon: mdi:speaker
   mac: B8:E9:37:8C:93:12
   name: b8e9378c9312
   picture:
   track: false
   vendor: Sonos, Inc.
 
-b8e9378c930a:
+sonos_two:
   hide_if_away: false
-  icon:
+  icon: mdi:speaker
   mac: B8:E9:37:8C:93:0A
   name: b8e9378c930a
   picture:
   track: false
   vendor: Sonos, Inc.
 
-5caafd10726f:
+sonos_three:
   hide_if_away: false
-  icon:
+  icon: mdi:speaker
   mac: 5C:AA:FD:10:72:6F
   name: 5caafd10726f
   picture:
@@ -251,24 +227,6 @@ ro_phone:
   track: true
   vendor: Samsung Electronics Co.,Ltd
 
-70288bd7794d:
-  hide_if_away: false
-  icon:
-  mac: 70:28:8B:D7:79:4D
-  name: 70288bd7794d
-  picture:
-  track: false
-  vendor: Samsung Electronics Co.,Ltd
-
-5ccf7faf0a3c:
-  hide_if_away: false
-  icon:
-  mac: 5C:CF:7F:AF:0A:3C
-  name: 5ccf7faf0a3c
-  picture:
-  track: true
-  vendor: Espressif Inc.
-
 peter_kindle:
   hide_if_away: false
   icon: mdi:book-open
@@ -278,15 +236,6 @@ peter_kindle:
   track: true
   vendor: Private
 
-peter_phone:
-  hide_if_away: false
-  icon:
-  mac:
-  name: peter
-  picture:
-  track: true
-  vendor:
-
 ro_tablet:
   hide_if_away: false
   icon: mdi:tablet
@@ -295,3 +244,66 @@ ro_tablet:
   picture:
   track: true
   vendor: Amazon Technologies Inc.
+
+pily_tablet:
+  hide_if_away: true
+  icon:
+  mac: 6C:94:F8:B5:33:C6
+  name: Pily's Tablet
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+javi_switch:
+  hide_if_away: true
+  icon: mdi:nintendo-switch
+  mac: 98:B6:E9:BA:F5:9F
+  name: Javi's Switch
+  picture:
+  track: true
+  vendor: Nintendo Co.,Ltd
+
+echo_one:
+  hide_if_away: false
+  icon: mdi:amazon
+  mac: B4:7C:9C:A6:06:11
+  name: b47c9ca60611
+  picture:
+  track: false
+  vendor: Amazon Technologies Inc.
+
+echo_two:
+  hide_if_away: false
+  icon: mdi:amazon
+  mac: FC:A6:67:69:CE:70
+  name: fca66769ce70
+  picture:
+  track: false
+  vendor: Amazon Technologies Inc.
+
+echo_three:
+  hide_if_away: false
+  icon: mdi:amazon
+  mac: FC:A6:67:3B:0D:24
+  name: Echo
+  picture:
+  track: false
+  vendor: Amazon Technologies Inc.
+
+ro_laptop:
+  hide_if_away: false
+  icon: mdi:laptop
+  mac: D8:0F:99:92:9D:05
+  name: Ro's Laptop
+  picture:
+  track: true
+  vendor: Hon Hai Precision Ind. Co.,Ltd.
+
+ac0d1bfa81b4:
+  hide_if_away: false
+  icon:
+  mac: AC:0D:1B:FA:81:B4
+  name: ac0d1bfa81b4
+  picture:
+  track: true
+  vendor: LG Electronics (Mobile Communications)

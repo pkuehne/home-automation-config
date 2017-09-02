@@ -1,7 +1,7 @@
 version: '3'
 services:
     letsencrypt:
-        image: "linuxserver/letsencrypt"
+        image: "linuxserver/letsencrypt:latest"
         container_name: "letsencrypt"
         restart: "always"
         volumes:
@@ -15,7 +15,7 @@ services:
             TZ: "Europe/London"
         privileged: true
     mosquitto:
-        image: "eclipse-mosquitto"
+        image: "eclipse-mosquitto:latest"
         container_name: "mosquitto"
         restart: "always"
         volumes:
@@ -40,7 +40,7 @@ services:
         depends_on:
             - "mosquitto"
             - "letsencrypt"
-        image: "homeassistant/home-assistant"
+        image: "homeassistant/home-assistant:latest"
         container_name: "home-assistant"
         restart: "always"
         network_mode: "host"
@@ -48,17 +48,23 @@ services:
             - "./home-assistant/config:/config"
             - "/etc/localtime:/etc/localtime:ro"
         ports:
-            - "8123:8123"   # Todo: Set this back to 8123
+            - "8123:8123"
+            - "8300:8300"
         devices:
             - "/dev/zwave:/dev/zwave"
     appdaemon:
         depends_on:
             - "home-assistant"
-        image: "appdaemon:latest"
+        image: "acockburn/appdaemon:latest"
         container_name: "appdaemon"
         restart: "always"
+        environment:
+            HA_URL: "http://192.168.1.91:8123"
+            DASH_URL: "http://192.168.1.91:5050"
         volumes:
             - "./appdaemon/:/conf"
+        ports:
+            - "5050:5050"
     duckdns:
         build: "./duckdns"
         container_name: "duckdns"

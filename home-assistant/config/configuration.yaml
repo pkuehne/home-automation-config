@@ -53,6 +53,8 @@ homeassistant:
       friendly_name: "Time in Redhill"
     sensor.upstairs_landing_battery:
       icon: mdi:battery
+    sensor.hallway_battery:
+      icon: mdi:battery
 
 # Show links to resources in log and frontend
 #introduction:
@@ -153,17 +155,33 @@ sensor:
     type: mean
     name: "Average Temperature"
     entity_ids:
-      - sensor.sophias_room_temperature
+      - sensor.hallway_temperature
+      - sensor.living_room_temperature
       - sensor.upstairs_landing_temperature
+  - platform: min_max
+    type: mean
+    name: "Average Humidity"
+    entity_ids:
+      - sensor.hallway_relative_humidity
+      - sensor.living_room_relative_humidity
+      - sensor.upstairs_landing_relative_humidity
   - platform: template
     sensors:
       upstairs_landing_battery:
         value_template: "{{states.zwave.upstairs_landing.attributes.battery_level}}"
         friendly_name: "Upstairs Landing Sensor Battery"
         unit_of_measurement: "%"
+      hallway_battery:
+        value_template: "{{states.zwave.hallway.attributes.battery_level}}"
+        friendly_name: "Hallway Sensor Battery"
+        unit_of_measurement: "%"
+
 
 alarm_control_panel:
   - platform: manual
+    name: "Alarm Status"
+    pending_time: 30 # seconds to get out
+    trigger_time: 3600 # Trigger and hold for 1 hour
 
 media_player:
   - platform: webostv
@@ -179,6 +197,13 @@ media_player:
   - platform: plex
     entity_namespace: 'plex'
   - platform: sonos
+
+emulated_hue:
+  listen_port: 80
+  expose_by_default: false
+  exposed_domains:
+    - media_player
+    - switch
 
 notify:
   - name: notify
@@ -244,3 +269,11 @@ input_boolean:
     name: Fan Automation
     initial: on
     icon: mdi:fan
+  control_alarm_automatically:
+    name: Control Alarm Automatically
+    initial: on
+    icon: mdi:run
+  check_downstairs_motion_sensors:
+    name: Check Downstairs Motion Sensors
+    initial: on
+    icon: mdi:eye

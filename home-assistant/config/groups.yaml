@@ -37,11 +37,11 @@ sophia_room:
     view: yes
     entities:
         - camera.sophias_room
-        - sensor.sophias_room_relative_humidity
-        - sensor.sophias_room_luminance
-        - sensor.sophias_room_temperature
-        - sensor.sophias_room_ultraviolet
-        - binary_sensor.sophias_room_sensor
+          #- sensor.sophias_room_relative_humidity
+          #- sensor.sophias_room_luminance
+          #- sensor.sophias_room_temperature
+          #- sensor.sophias_room_ultraviolet
+          #- binary_sensor.sophias_room_sensor
 
 guest_room:
     name: Guest Room
@@ -91,12 +91,14 @@ temperature:
       - sensor.average_temperature
       - sensor.sophias_room_temperature
       - sensor.upstairs_landing_temperature
+      - sensor.hallway_temperature
+      - sensor.living_room_temperature
 
 people:
     name: People
     view: no
     entities:
-        - device_tracker.peter_phone_phone
+        - device_tracker.peter_phone
         - device_tracker.ro_phone
 
 batteries:
@@ -106,19 +108,41 @@ batteries:
         - sensor.peters_phone_battery
         - sensor.peters_tablet_battery
         - sensor.upstairs_landing_battery
+        - sensor.hallway_battery
 
-motion_detectors:
-    name: Motion Detectors
+door_sensors:
+    name: Door Sensors
     view: no
     entities:
-      - binary_sensor.sophias_room_sensor
+        - binary_sensor.front_door_sensor
+
+all_motion_sensors:
+    name: Motion Sensors
+    view: no
+    entities:
+      - group.upstairs_motion_sensors
+      - group.downstairs_motion_sensors
+
+upstairs_motion_sensors:
+    name: Upstairs Motion Sensors
+    view: no
+    entities:
       - binary_sensor.upstairs_landing_sensor
+
+downstairs_motion_sensors:
+    name: Downstairs Motion Sensors
+    view: no
+    entities:
+      - binary_sensor.hallway_sensor
+      - binary_sensor.living_room_sensor
 
 alarm_panel:
     name: Alarm Panel
     view: no
     entities:
-        - alarm_control_panel.ha_alarm
+        - alarm_control_panel.alarm_status
+        - input_boolean.control_alarm_automatically
+        - input_boolean.check_downstairs_motion_sensors
 
 date:
     name: Date/Time
