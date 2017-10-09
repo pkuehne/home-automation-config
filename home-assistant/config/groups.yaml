@@ -119,12 +119,18 @@ batteries:
         - sensor.peters_tablet_battery
         - sensor.upstairs_landing_battery
         - sensor.hallway_battery
+        - sensor.living_room_battery
+        - sensor.font_door_battery
+        - sensor.back_door_battery
+        - sensor.kitchen_door_battery
 
 door_sensors:
     name: Door Sensors
     view: no
     entities:
         - binary_sensor.front_door_sensor
+        - binary_sensor.back_door_sensor
+        - binary_sensor.kitchen_door_sensor
 
 all_motion_sensors:
     name: Motion Sensors

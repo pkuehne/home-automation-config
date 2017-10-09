@@ -307,3 +307,30 @@ ac0d1bfa81b4:
   picture:
   track: true
   vendor: LG Electronics (Mobile Communications)
+
+bc54363c8c18:
+  hide_if_away: false
+  icon:
+  mac: BC:54:36:3C:8C:18
+  name: bc54363c8c18
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+c0335ea37c0f:
+  hide_if_away: false
+  icon:
+  mac: C0:33:5E:A3:7C:0F
+  name: c0335ea37c0f
+  picture:
+  track: true
+  vendor: Microsoft
+
+44650dfd0303:
+  hide_if_away: false
+  icon:
+  mac: 44:65:0D:FD:03:03
+  name: 44650dfd0303
+  picture:
+  track: true
+  vendor: Amazon Technologies Inc.

@@ -175,6 +175,22 @@ sensor:
         value_template: "{{states.zwave.hallway.attributes.battery_level}}"
         friendly_name: "Hallway Sensor Battery"
         unit_of_measurement: "%"
+      living_room_battery:
+        value_template: "{{states.zwave.living_room.attributes.battery_level}}"
+        friendly_name: "Hallway Sensor Battery"
+        unit_of_measurement: "%"
+      back_door_battery:
+        value_template: "{{states.zwave.back_door.attributes.battery_level}}"
+        friendly_name: "Back Door Sensor Battery"
+        unit_of_measurement: "%"
+      front_door_battery:
+        value_template: "{{states.zwave.front_door.attributes.battery_level}}"
+        friendly_name: "Front Door Sensor Battery"
+        unit_of_measurement: "%"
+      kitchen_door_battery:
+        value_template: "{{states.zwave.kitchen_door.attributes.battery_level}}"
+        friendly_name: "Kitchen Door Sensor Battery"
+        unit_of_measurement: "%"
 
 
 alarm_control_panel:
