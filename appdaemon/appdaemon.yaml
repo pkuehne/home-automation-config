@@ -72,3 +72,7 @@ Sonos Notifier:
   module: sonos_say
   class: SonosSay
 
+Notifier:
+  module: notification
+  class: Notify
+

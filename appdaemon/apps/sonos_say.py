@@ -2,9 +2,9 @@ import appdaemon.appapi as api
 
 # Use with
 #   self.fire_event ("SONOS_SAY",
-#                    speaker="media_player.den"
-#                    message="test message"
-#                    delay=5.0
+#                    speaker="media_player.den",
+#                    message="test message",
+#                    delay=5.0)
 #
 
 class SonosSay(api.AppDaemon):
@@ -17,7 +17,7 @@ class SonosSay(api.AppDaemon):
     def sonos_say_event(self, event_name, data, kwargs):
         """ Says stuff over Sonos """
 
-        self.log(", ".join("=".join(_) for _ in data.items()))
+        #self.log(", ".join("=".join(_) for _ in data.items()))
         player_volume = 0.3
         player_entity = data.get("speaker", "media_player.kitchen")
         player_message = data.get("message", "This is Home Assistant, I experienced an internal fault")
@@ -32,6 +32,7 @@ class SonosSay(api.AppDaemon):
         self.call_service ("tts/google_say",
                             entity_id=player_entity,
                             message=player_message)
+        self.log ("Waiting {}s".format(player_delay))
         self.run_in (self.sonos_restore, player_delay, player_entity=player_entity)
 
     def sonos_restore(self, kwargs):

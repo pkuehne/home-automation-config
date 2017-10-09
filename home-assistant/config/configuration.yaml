@@ -275,5 +275,5 @@ input_boolean:
     icon: mdi:run
   check_downstairs_motion_sensors:
     name: Check Downstairs Motion Sensors
-    initial: on
+    initial: off
     icon: mdi:eye

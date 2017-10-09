@@ -1,21 +1,15 @@
 import appdaemon.appapi as api
 import datetime as dt
 
-#
-# Status Update app
-#
-# Args:
-#
-
-
 class Summary(api.AppDaemon):
     """ Creates a summary status for the house """
 
     def initialize(self):
         """ Set up callbacks etc """
         self.log("Summary initialised...")
-        self.run_daily(self.notify_peter, dt.time(7,0,0))
-        self.log(self.create_status())
+        self.fire_event("NOTIFY",
+                message=self.create_status(),
+                announce=False)
 
     def notify_peter(self, kwargs):
         """ Tell Peter the status """
@@ -41,10 +35,13 @@ class Summary(api.AppDaemon):
         #            "at home" if peter_home else "not at home")
 
         message += "The average temperature in the house is " \
-                    "{} degrees. ".format( temperature)
+                    "{} degrees. ".format(temperature)
 
         message += "The weather is {} ".format(weather)
         message += "with a forecast high of {} degrees " \
                 "and a low of {} degrees".format(high, low)
         return message
+
+    def format_temperature(temperature):
+        """ From 3.69 -> 3 point 6 9 """
 

@@ -13,6 +13,11 @@ class AlarmClock(api.AppDaemon):
         self.listen_state(self.wakeup_enabled,
                             "input_boolean.wakeup_enabled",
                             new="on")
+        enabled = self.get_state("input_boolean.wakeup_enabled")
+        if enabled:
+            self.wakeup_enabled(None, None, None, None, None)
+        else:
+            self.wakeup_disabled(None, None, None, None, None)
 
     def wakeup_enabled(self, entity, attributes, old, new, kwargs):
         """ Set a timer based on the slider inputs """
@@ -30,6 +35,8 @@ class AlarmClock(api.AppDaemon):
 
     def wakeup_callback(self, kwargs):
         """ Called in the morning to do stuff """
-        self.log ("Good morning")
+        self.fire_event("NOTIFY",
+                message="Good morning!",
+                announce=False)
         # Turn on morning light
         # Schedule status message

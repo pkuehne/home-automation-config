@@ -65,10 +65,11 @@ class AlarmController(api.AppDaemon):
             sensor_name = self.get_state(triggered_sensor, "friendly_name")
         else:
             sensor_name = "Unknown"
-        self.notify("Entity <{}> triggered the alarm".format(sensor_name),
-            title="Home Assistant")
-        self.call_service ("alarm_control_panel/alarm_trigger",
-                entity_id = "alarm_control_panel.alarm_status")
+        self.fire_event ("NOTIFY",
+                message = "Entity <{}> triggered the alarm".format(sensor_name))
+        self.fire_event ("NOTIFY",
+                message = "Unauthorized entry detected!",
+                announce = True)
 
     def alarm_triggered(self, entity, attribute, old, new, kwargs):
         """ Called when the alarm panel is triggered in some way """
