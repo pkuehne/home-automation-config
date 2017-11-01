@@ -21,8 +21,8 @@ class AlarmClock(api.AppDaemon):
 
     def wakeup_enabled(self, entity, attributes, old, new, kwargs):
         """ Set a timer based on the slider inputs """
-        hour = self.get_state("input_slider.wakeup_hour")
-        minute = self.get_state("input_slider.wakeup_minute")
+        hour = self.get_state("input_number.wakeup_hour")
+        minute = self.get_state("input_number.wakeup_minute")
         timer = dt.time(int(float(hour)),int(float(minute)),0)
         self.wakeup_handle = self.run_daily(self.wakeup_callback, timer)
         self.log("Wakeup timer enabled for {}".format(timer))

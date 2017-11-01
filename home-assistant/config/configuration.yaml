@@ -261,7 +261,7 @@ switch:
   payload_off: "off"
   retain: true
 
-input_slider:
+input_number:
   wakeup_hour:
     name: Wake Up Hour
     initial: 6

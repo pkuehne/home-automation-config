@@ -334,3 +334,57 @@ c0335ea37c0f:
   picture:
   track: true
   vendor: Amazon Technologies Inc.
+
+404e3684843f:
+  hide_if_away: false
+  icon:
+  mac: 40:4E:36:84:84:3F
+  name: 404e3684843f
+  picture:
+  track: true
+  vendor: HTC Corporation
+
+bc8385d0181f:
+  hide_if_away: false
+  icon:
+  mac: BC:83:85:D0:18:1F
+  name: bc8385d0181f
+  picture:
+  track: true
+  vendor: Microsoft Corporation
+
+8883223376b3:
+  hide_if_away: false
+  icon:
+  mac: 88:83:22:33:76:B3
+  name: 8883223376b3
+  picture:
+  track: true
+  vendor: Samsung Electronics Co.,Ltd
+
+c80210cbd14e:
+  hide_if_away: false
+  icon:
+  mac: C8:02:10:CB:D1:4E
+  name: c80210cbd14e
+  picture:
+  track: true
+  vendor: LG Innotek
+
+9810e8798f09:
+  hide_if_away: false
+  icon:
+  mac: 98:10:E8:79:8F:09
+  name: 9810e8798f09
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+24da9b2120c3:
+  hide_if_away: false
+  icon:
+  mac: 24:DA:9B:21:20:C3
+  name: 24da9b2120c3
+  picture:
+  track: true
+  vendor: Motorola Mobility LLC, a Lenovo Company

@@ -26,14 +26,18 @@ services:
             - "1883:1883"
             - "9001:9001"
     zoneminder:
-        image: "quantumobject/docker-zoneminder:latest"
+        image: "kylejohnson/zoneminder:latest"
         container_name: "zoneminder"
         restart: "always"
+        tty: true
+        shm_size: "4096m"
+        environment:
+            VIRTUAL_HOST: "192.168.1.91"
         volumes:
+            - "./zoneminder/images:/var/lib/zoneminder/images"
+            - "./zoneminder/events:/var/lib/zoneminder/events"
             - "./zoneminder/mysql:/var/lib/mysql"
-            - "./zoneminder/cache:/var/cache/zoneminder"
-            - "./zoneminder/backups:/var/backups"
-            - "./zoneminder/config:/config"
+            - "./zoneminder/logs:/var/log/zm"
         ports:
             - "9123:80"
     home-assistant:
