@@ -1,4 +1,4 @@
-import appdaemon.appapi as api
+import appdaemon.plugins.hass.hassapi as hass
 
 # Use with
 #   self.fire_event ("NOTIFY",
@@ -7,7 +7,7 @@ import appdaemon.appapi as api
 #                    recipients=["peter_phone"], # list of mqtt recipients
 #                    speaker="media_player.kitchen", # Sonos player to play on
 #                   )
-class Notify(api.AppDaemon):
+class Notify(hass.Hass):
     """ Notify people of something """
 
     def initialize(self):

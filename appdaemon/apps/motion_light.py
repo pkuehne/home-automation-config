@@ -1,4 +1,4 @@
-import appdaemon.appapi as api
+import appdaemon.plugins.hass.hassapi as hass
 import datetime as dt
 
 #
@@ -15,7 +15,7 @@ import datetime as dt
 # constrain_end_time = sunrise
 #
 
-class MotionLight(api.AppDaemon):
+class MotionLight(hass.Hass):
     """ Turns on couch light when it gets dark """
 
     def initialize(self):

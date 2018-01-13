@@ -1,4 +1,4 @@
-import appdaemon.appapi as api
+import appdaemon.plugins.hass.hassapi as hass
 import datetime as dt
 
 #
@@ -17,7 +17,7 @@ import datetime as dt
 # Will trigger when temperature is > upper
 # and turn off when temperature is < lower
 
-class FanController(api.AppDaemon):
+class FanController(hass.Hass):
     """ Turns on fan when it gets hot """
 
     def initialize(self):

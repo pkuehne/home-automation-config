@@ -1,4 +1,4 @@
-import appdaemon.appapi as api
+import appdaemon.plugins.hass.hassapi as hass
 
 # Use with
 #   self.fire_event ("SONOS_SAY",
@@ -7,7 +7,7 @@ import appdaemon.appapi as api
 #                    delay=5.0)
 #
 
-class SonosSay(api.AppDaemon):
+class SonosSay(hass.Hass):
     """ Make Sonos say something """
 
     def initialize(self):

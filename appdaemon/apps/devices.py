@@ -1,4 +1,4 @@
-import appdaemon.appapi as api
+import appdaemon.plugins.hass.hassapi as hass
 import datetime as dt
 
 #
@@ -7,7 +7,7 @@ import datetime as dt
 # Args:
 #
 
-class NotifyOnNewDevice(api.AppDaemon):
+class NotifyOnNewDevice(hass.Hass):
     """ Notifies when a new device joins the network """
 
     def initialize(self):

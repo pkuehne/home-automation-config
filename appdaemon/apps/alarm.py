@@ -1,5 +1,6 @@
-import appdaemon.appapi as api
 import datetime as dt
+import appdaemon.plugins.hass.hassapi as hass
+
 
 #
 # Alarm App
@@ -7,7 +8,7 @@ import datetime as dt
 # Args:
 #
 
-class AlarmController(api.AppDaemon):
+class AlarmController(hass.Hass):
     """ Looks after the alarm system """
 
     def initialize(self):

@@ -1,18 +1,14 @@
-import appdaemon.appapi as api
+import appdaemon.plugins.hass.hassapi as hass
 import datetime as dt
 
-class AlarmClock(api.AppDaemon):
+class AlarmClock(hass.Hass):
     """ Morning alarm clock """
 
     def initialize(self):
         """ Sets up callbacks and state """
         self.wakeup_handle = None
-        self.listen_state(self.wakeup_disabled,
-                            "input_boolean.wakeup_enabled",
-                            new="off")
-        self.listen_state(self.wakeup_enabled,
-                            "input_boolean.wakeup_enabled",
-                            new="on")
+        self.listen_state(self.wakeup_disabled, "input_boolean.wakeup_enabled", new="off")
+        self.listen_state(self.wakeup_enabled, "input_boolean.wakeup_enabled", new="on")
         enabled = self.get_state("input_boolean.wakeup_enabled")
         if enabled:
             self.wakeup_enabled(None, None, None, None, None)

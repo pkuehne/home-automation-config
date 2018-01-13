@@ -1,4 +1,4 @@
-import appdaemon.appapi as api
+import appdaemon.plugins.hass.hassapi as hass
 import datetime as dt
 
 #
@@ -7,7 +7,7 @@ import datetime as dt
 # Args:
 #
 
-class EveningOn(api.AppDaemon):
+class EveningOn(hass.Hass):
     """ Turns on couch light when it gets dark """
 
     def initialize(self):
@@ -27,7 +27,7 @@ class EveningOn(api.AppDaemon):
                     transition=900)
             self.log("Turning on couch light...")
 
-class NightOff(api.AppDaemon):
+class NightOff(hass.Hass):
     """ Turns lights off when late and no activity """
 
     def initialize(self):
@@ -57,7 +57,7 @@ class NightOff(api.AppDaemon):
                 self.turn_off("light.behind_couch")
                 self.turn_off("media_player.living_room_tv")
 
-class PatioLight(api.AppDaemon):
+class PatioLight(hass.Hass):
     """ Control the Patio Light """
 
     def initialize(self):

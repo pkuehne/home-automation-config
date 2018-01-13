@@ -388,3 +388,39 @@ c80210cbd14e:
   picture:
   track: true
   vendor: Motorola Mobility LLC, a Lenovo Company
+
+3871de133491:
+  hide_if_away: false
+  icon:
+  mac: 38:71:DE:13:34:91
+  name: 3871de133491
+  picture:
+  track: true
+  vendor: unknown
+
+d04f7e2e8fff:
+  hide_if_away: false
+  icon:
+  mac: D0:4F:7E:2E:8F:FF
+  name: d04f7e2e8fff
+  picture:
+  track: true
+  vendor: unknown
+
+9061ae4bd043:
+  hide_if_away: false
+  icon:
+  mac: 90:61:AE:4B:D0:43
+  name: 9061ae4bd043
+  picture:
+  track: true
+  vendor: Intel Corporate
+
+404e368c923c:
+  hide_if_away: false
+  icon:
+  mac: 40:4E:36:8C:92:3C
+  name: 404e368c923c
+  picture:
+  track: true
+  vendor: HTC Corporation

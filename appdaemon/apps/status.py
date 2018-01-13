@@ -1,7 +1,7 @@
-import appdaemon.appapi as api
+import appdaemon.plugins.hass.hassapi as hass
 import datetime as dt
 
-class Summary(api.AppDaemon):
+class Summary(hass.Hass):
     """ Creates a summary status for the house """
 
     def initialize(self):
@@ -17,13 +17,13 @@ class Summary(api.AppDaemon):
 
     def create_status(self):
         """ Creates the status message """
-        peter_home = self.get_state("device_tracker.peter_phone") == "home"
-        peter_battery = self.get_state("device_tracker.peter_phone", "battery")
-        temperature = self.get_state("sensor.average_temperature")
-        weather = self.get_state("sensor.owm_condition")
+        peter_home = self.entities.device_tracker.peter_phone.state == "home"
+        peter_battery = self.entities.device_tracker.peter_phone.attributes.get("battery", 0)
+        temperature = self.entities.sensor.average_temperature
+        weather = self.entities.sensor.owm_condition
         current_time = dt.datetime.now().time()
 
-        forecast = self.get_state("weather.forecast", "forecast")
+        forecast = self.entities.weather.forecast.attributes.get("forecast", "None")
         high = max([forecast["temperature"] for forecast in forecast])
         low = min([forecast["temperature"] for forecast in forecast])
 
