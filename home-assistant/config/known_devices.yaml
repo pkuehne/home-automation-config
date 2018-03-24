@@ -424,3 +424,111 @@ d04f7e2e8fff:
   picture:
   track: true
   vendor: HTC Corporation
+
+a4f1e84b07df:
+  hide_if_away: false
+  icon:
+  mac: A4:F1:E8:4B:07:DF
+  name: a4f1e84b07df
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+409c2868bd03:
+  hide_if_away: false
+  icon:
+  mac: 40:9C:28:68:BD:03
+  name: 409c2868bd03
+  picture:
+  track: true
+  vendor: unknown
+
+68ab1ee37ad8:
+  hide_if_away: false
+  icon:
+  mac: 68:AB:1E:E3:7A:D8
+  name: 68ab1ee37ad8
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+fc4596c99661:
+  hide_if_away: false
+  icon:
+  mac: FC:45:96:C9:96:61
+  name: fc4596c99661
+  picture:
+  track: true
+  vendor: COMPAL INFORMATION (KUNSHAN) CO., LTD.
+
+b4bff687d2aa:
+  hide_if_away: false
+  icon:
+  mac: B4:BF:F6:87:D2:AA
+  name: b4bff687d2aa
+  picture:
+  track: true
+  vendor: Samsung Electronics Co.,Ltd
+
+b4bff687d11c:
+  hide_if_away: false
+  icon:
+  mac: B4:BF:F6:87:D1:1C
+  name: b4bff687d11c
+  picture:
+  track: true
+  vendor: Samsung Electronics Co.,Ltd
+
+a8a19895872a:
+  hide_if_away: false
+  icon:
+  mac: A8:A1:98:95:87:2A
+  name: a8a19895872a
+  picture:
+  track: true
+  vendor: TCT mobile ltd
+
+78886d10a81f:
+  hide_if_away: false
+  icon:
+  mac: 78:88:6D:10:A8:1F
+  name: 78886d10a81f
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+30a9de0198e8:
+  hide_if_away: false
+  icon:
+  mac: 30:A9:DE:01:98:E8
+  name: 30a9de0198e8
+  picture:
+  track: true
+  vendor: LG Innotek
+
+58fb8466ebda:
+  hide_if_away: false
+  icon:
+  mac: 58:FB:84:66:EB:DA
+  name: 58fb8466ebda
+  picture:
+  track: true
+  vendor: Intel Corporate
+
+5082d5d33845:
+  hide_if_away: false
+  icon:
+  mac: 50:82:D5:D3:38:45
+  name: 5082d5d33845
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+b827eb2d753c:
+  hide_if_away: false
+  icon:
+  mac: B8:27:EB:2D:75:3C
+  name: b827eb2d753c
+  picture:
+  track: true
+  vendor: unknown
